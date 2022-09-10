@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+//https://dev.to/aviyel/crafting-an-interactive-node-cli-tool-from-absolute-scratch-5ecc
+require = require('esm')(module /*, options*/);
+require('../src/interfaceCommand').interfaceCommand(process.argv);

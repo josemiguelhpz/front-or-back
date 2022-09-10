@@ -1,24 +1,41 @@
 {
-  "name": "front-or-back",
+  "name": "@josemiguelhpz/front-or-back",
   "version": "1.0.0",
-  "description": "This project contains a series of tests that help new programmers determine which is easier for them to develop, the backend or the frontend.",
-  "main": "index.js",
+  "description": "A Command Line Interface with a series of tests that help new programmers determine which is easier for them to develop, the backend or the frontend.",
+  "bin": {
+    "@josemiguelhpz/front-or-back": "bin/front-or-back",
+    "front-or-back": "bin/front-or-back"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/josemiguelhpz/front-or-back"
   },
   "keywords": [
     "backend",
     "frontend",
-    "tests"
+    "tests",
+    "cli",
+    "command",
+    "line",
+    "interface",
+    "javascript",
+    "auto-generator",
+    "front-or-back"
   ],
   "author": "Jose Miguel Hernandez Perez",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/josemiguelhpz/front-or-back/issues"
   },
-  "homepage": "https://github.com/josemiguelhpz/front-or-back#readme"
+  "homepage": "https://github.com/josemiguelhpz/front-or-back#readme",
+  "dependencies": {
+    "arg": "^5.0.1",
+    "chalk": "^4.1.2",
+    "esm": "^3.2.25",
+    "i18n-js": "^4.1.1",
+    "inquirer": "^8.2.0",
+    "ncp": "^2.0.0"
+  }
 }
