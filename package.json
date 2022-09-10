@@ -1,0 +1,24 @@
+{
+  "name": "front-or-back",
+  "version": "1.0.0",
+  "description": "This project contains a series of tests that help new programmers determine which is easier for them to develop, the backend or the frontend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josemiguelhpz/front-or-back"
+  },
+  "keywords": [
+    "backend",
+    "frontend",
+    "tests"
+  ],
+  "author": "Jose Miguel Hernandez Perez",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/josemiguelhpz/front-or-back/issues"
+  },
+  "homepage": "https://github.com/josemiguelhpz/front-or-back#readme"
+}
