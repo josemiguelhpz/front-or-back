@@ -10,5 +10,5 @@ At the beginning of the application you can select Spanish as the language, alth
 - Open the project using an IDE like VSCode
 - Install [NodeJs](https://nodejs.org/) (Recomended version >=18)
 - Open a terminal at the root of the project
-- Execute `npx front-or-back` to install dependencies
+- Execute `npx front-or-back`
 - Follow instructions from the CLI
