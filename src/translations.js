@@ -2,10 +2,14 @@ import { I18n } from "i18n-js";
 
 const i18n = new I18n({
     "en": {
-        instructions: "welcome a",
+        welcome: "--------👋 Welcome to \"Front or Back?\"-------- \n Let's do some challenges to see which side you are more comfortable working on.",
+        copy: "Hold up!! Copying project files...",
+        dependency: "Installing dependencies...."
     },
     "es": {
-        instructions: "bienvenido a",
+        welcome: "--------👋 Te damos la bienvenida a \"¿Front o Back?\"-------- \n Vamos a hacer algunos desafios para entender en que sitio te podrias sentir mas comodo/a.",
+        copy: "Un momento, copiando el desafio...",
+        dependency: "Instalando las dependencias...."
     },
 });
 

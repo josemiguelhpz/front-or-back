@@ -1,0 +1,22 @@
+{
+  "name": "practice.backend",
+  "version": "1.0.0",
+  "description": "This is an easy project from \"front-or-back\" project",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "practice"
+  ],
+  "author": "josemiguelhpz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.1.0"
+  },
+  "devDependencies": {
+    "supertest": "^6.1.6"
+  }
+}
