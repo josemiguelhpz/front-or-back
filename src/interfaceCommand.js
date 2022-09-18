@@ -7,8 +7,10 @@ function argumentOptionsParser(rawArguments) {
         {
             "--español": Boolean,
             "--spanish": Boolean,
+            "--test": Boolean,
             "--e": "--español",
-            "--s": "--spanish"
+            "--s": "--spanish",
+            "--t": "--test"
         },
         {
             argv: rawArguments.slice(2),
@@ -16,7 +18,8 @@ function argumentOptionsParser(rawArguments) {
     );
     return {
         template: args._[0],
-        languaje: (args["--español"] || args["--spanish"]) ? "Español" : "English"
+        languaje: (args["--español"] || args["--spanish"]) ? "Español" : "English",
+        runTest: (args["--test"] || args["--t"]) ? true : false,
     };
 }
 
@@ -51,6 +54,7 @@ async function inquireUndeclaredItems(opts) {
 }
 
 export async function interfaceCommand(args) {
+    console.clear();
     let opts = argumentOptionsParser(args);
     opts = await inquireUndeclaredItems(opts);
     //console.log(opts);

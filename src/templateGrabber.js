@@ -70,10 +70,6 @@ export async function templateGrabber(opts) {
 
     await runningTask.run();
 
-    console.log(chalk.green(`Creating project from template ${opts.template}`));
+    console.log(chalk.green(`${t("creation")} ${opts.template}`));
     return true;
-}
-
-export async function fireEasyBackendChallenge(ops) {
-    templateGrabber({ targetDirectory: "backend/nodejs1", template: "backend/nodejs1" })
 }
