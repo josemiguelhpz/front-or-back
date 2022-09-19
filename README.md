@@ -13,3 +13,6 @@ At the beginning of the application you can select Spanish as the language, alth
 - Open a terminal at the root of the project
 - Execute `npx front-or-back`
 - Follow instructions from the CLI
+
+## Tip
+use `npx front-or-back --english` or `npx front-or-back --e` if you want to skip languaje menu part. use `npx front-or-back --spanish` or `npx front-or-back --s` if you want to obtain instructions in spanish.

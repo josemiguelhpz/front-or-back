@@ -5,10 +5,10 @@ import { frontOrBack } from "./main"
 function argumentOptionsParser(rawArguments) {
     let args = arg(
         {
-            "--español": Boolean,
+            "--english": Boolean,
             "--spanish": Boolean,
             "--test": Boolean,
-            "--e": "--español",
+            "--e": "--english",
             "--s": "--spanish",
             "--t": "--test"
         },
@@ -16,9 +16,12 @@ function argumentOptionsParser(rawArguments) {
             argv: rawArguments.slice(2),
         }
     );
+    let languaje = "none"
+    if (args["--spanish"] || args["--s"]) languaje = "Español"
+    if (args["--english"] || args["--e"]) languaje = "English"
     return {
         template: args._[0],
-        languaje: (args["--español"] || args["--spanish"]) ? "Español" : "English",
+        languaje: languaje,
         runTest: (args["--test"] || args["--t"]) ? true : false,
     };
 }
@@ -26,7 +29,7 @@ function argumentOptionsParser(rawArguments) {
 async function inquireUndeclaredItems(opts) {
 
     const displayOptions = [];
-    if (opts.languaje === "English") {
+    if (opts.languaje === "none") {
         displayOptions.push({
             type: "list",
             name: "languaje",

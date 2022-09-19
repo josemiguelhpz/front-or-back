@@ -10,6 +10,8 @@ var userData = {
     records: []
 };
 
+function isOdd(num) { return num % 2; }
+
 async function saveData() {
     var json = JSON.stringify(userData);
     await fs_writeFile(fileName, json);
@@ -42,6 +44,19 @@ export async function finishCurrentLevel() {
     await saveData()
 }
 export async function calculateResult() {
-    //impares=back, pares = front
-    console.log(userData)
+    let totalBackTime = 0;
+    let totalFrontTime = 0;
+    userData.records.forEach(function (value, i) {
+        //calculate time difference (miliseconds)
+        const diff = Math.abs(new Date(value.finishLevelAt) - new Date(value.startLevelAt));
+        //odd numbers are frontends else represent a backend challenge
+        if (isOdd(i)) totalFrontTime += diff;
+        else totalBackTime += diff;
+    });
+    console.log(`total backend: ${totalBackTime}`);
+    console.log(`total frontend: ${totalFrontTime}`);
+    if (totalBackTime > totalFrontTime) console.log(t("back"))
+    if (totalBackTime < totalFrontTime) console.log(t("front"))
+    if (totalBackTime === totalFrontTime) console.log(t("same"))
+
 }
