@@ -3,6 +3,6 @@ const { hello } = require('./logic.js');
 
 const router = Router();
 
-//Fix here..
+router.get('/hello/:name', hello);
 
 module.exports = router;

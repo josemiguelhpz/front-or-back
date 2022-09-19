@@ -55,8 +55,8 @@ export async function calculateResult() {
     });
     console.log(`total backend: ${totalBackTime}`);
     console.log(`total frontend: ${totalFrontTime}`);
-    if (totalBackTime > totalFrontTime) console.log(t("back"))
-    if (totalBackTime < totalFrontTime) console.log(t("front"))
+    if (totalBackTime < totalFrontTime) console.log(t("back"))
+    if (totalBackTime > totalFrontTime) console.log(t("front"))
     if (totalBackTime === totalFrontTime) console.log(t("same"))
 
 }
