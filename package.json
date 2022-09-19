@@ -1,5 +1,5 @@
 {
-  "name": "@josemiguelhpz/front-or-back",
+  "name": "front-or-back",
   "version": "1.0.0",
   "description": "A Command Line Interface with a series of tests that help new programmers determine which is easier for them to develop, the backend or the frontend.",
   "bin": {
